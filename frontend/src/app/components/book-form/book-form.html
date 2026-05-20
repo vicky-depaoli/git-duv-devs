@@ -1,28 +1,27 @@
 <div class="form-card">
   <form [formGroup]="form" (ngSubmit)="submit()">
-    
-    <h2>Book Form</h2>
+    <h2>Nuevo libro</h2>
 
-    <!-- TITLE -->
     <div>
-      <input placeholder="Nombre del libro" formControlName="title" />
-      <p *ngIf="submitted() && form.controls.title.invalid">
-        El nombre es obligatorio
-      </p>
+      <input placeholder="Nombre del libro" formControlName="nombre" />
+      <p *ngIf="submitted() && form.controls.nombre.invalid">El nombre es obligatorio</p>
     </div>
-    
-    <!-- AUTHOR -->
+
     <div>
-      <input placeholder="Autor" formControlName="author" />
-      <p *ngIf="submitted() && form.controls.author.invalid">
-        El autor es obligatorio
-      </p>
+      <input placeholder="ISMN" formControlName="ismn" />
+      <p *ngIf="submitted() && form.controls.ismn.invalid">El ISMN es obligatorio</p>
     </div>
-    
-    <!-- BUTTON -->
+
+    <div>
+      <label for="fecha">Fecha</label>
+      <input id="fecha" type="date" formControlName="fecha" />
+      <p *ngIf="submitted() && form.controls.fecha.invalid">La fecha es obligatoria</p>
+    </div>
+
+    <p *ngIf="errorMessage()">{{ errorMessage() }}</p>
+
     <button type="submit" [disabled]="loading()">
       {{ loading() ? 'Guardando...' : 'Guardar libro' }}
     </button>
-    
   </form>
 </div>

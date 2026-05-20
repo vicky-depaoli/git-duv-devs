@@ -16,12 +16,12 @@
 
 <ul>
   @for (book of books(); track book.id) {
-    <li>
+  <li>
       <strong>{{ book.nombre }}</strong>
-      - {{ book.isbn }}
-      - {{ book.fecha }}
-      <a [routerLink]="['/books', book.id]">Ver detalle</a>
-    </li>
+    - {{ book.ismn }}    <!-- ← era isbn, el campo real es ismn -->
+    - {{ book.fecha }}
+    <a [routerLink]="['/books', book.id]">Ver detalle</a>
+  </li>
   }
 </ul>
 

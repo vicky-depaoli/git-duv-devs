@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Autor;
+import com.example.demo.model.Libro;
 import com.example.demo.services.AutorService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -43,4 +44,10 @@ public class AutorController {
     public void delete(@PathVariable Long id) { 
         autorService.delete(id); 
     }
+    @GetMapping("/{id}/books")
+    public List<Libro> getBooksByAuthor(@PathVariable Long id) {
+        return autorService.getBooksByAuthor(id);
+    }
+    
+
 }

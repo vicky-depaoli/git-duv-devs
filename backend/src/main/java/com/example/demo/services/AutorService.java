@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.model.Autor;
+import com.example.demo.model.Libro;
 import com.example.demo.repositories.AutorRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -26,5 +27,10 @@ public class AutorService {
     }
     public void delete(Long id) { 
         autorRepository.deleteById(id); 
+    }
+
+    public List<Libro> getBooksByAuthor(Long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getBooksByAuthor'");
     }
 }
