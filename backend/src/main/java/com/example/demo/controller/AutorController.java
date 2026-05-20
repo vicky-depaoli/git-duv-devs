@@ -4,6 +4,7 @@ import com.example.demo.model.Autor;
 import com.example.demo.services.AutorService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/autores")
