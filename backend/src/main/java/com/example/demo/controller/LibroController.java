@@ -17,13 +17,19 @@ public class LibroController {
     }
 
     @GetMapping
-    public List<Libro> getAll() { return libroService.getAll(); }
+    public List<Libro> getAll() { 
+        return libroService.getAll(); 
+    }
 
     @GetMapping("/{id}")
-    public Libro getById(@PathVariable Long id) { return libroService.getById(id); }
+    public Libro getById(@PathVariable Long id) { 
+        return libroService.getById(id); 
+    }
 
     @PostMapping
-    public Libro create(@RequestBody Libro libro) { return libroService.save(libro); }
+    public Libro create(@RequestBody Libro libro) { 
+        return libroService.save(libro); 
+    }
 
     @PostMapping("/autor/{autorId}")
     public Libro createWithAutor(@RequestBody Libro libro, @PathVariable Long autorId) {
@@ -37,5 +43,7 @@ public class LibroController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) { libroService.delete(id); }
+    public void delete(@PathVariable Long id) { 
+        libroService.delete(id); 
+        }
 }

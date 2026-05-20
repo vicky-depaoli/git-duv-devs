@@ -18,11 +18,17 @@ public class LibroService {
         this.autorRepository = autorRepository;
     }
 
-    public List<Libro> getAll() { return libroRepository.findAll(); }
+    public List<Libro> getAll() { 
+        return libroRepository.findAll();
+    }
     
-    public Libro getById(Long id) { return libroRepository.findById(id).orElse(null); }
+    public Libro getById(Long id) { 
+        return libroRepository.findById(id).orElse(null); 
+    }
     
-    public Libro save(Libro libro) { return libroRepository.save(libro); }
+    public Libro save(Libro libro) { 
+        return libroRepository.save(libro); 
+    }
     
     public Libro saveWithAutor(Libro libro, Long autorId) {
         Autor autor = autorRepository.findById(autorId).orElse(null);
@@ -32,5 +38,7 @@ public class LibroService {
         return libroRepository.save(libro);
     }
     
-    public void delete(Long id) { libroRepository.deleteById(id); }
+    public void delete(Long id) { 
+        libroRepository.deleteById(id); 
+    }
 }
