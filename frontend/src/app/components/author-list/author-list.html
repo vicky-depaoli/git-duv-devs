@@ -1,1 +1,11 @@
-<p>author-list works!</p>
+<h2>Autores</h2>
+
+<ul>
+  @for (author of authors(); track author.id) {
+    <li>
+      {{ author.nombre }}
+      {{ author.apellido }}
+      - {{ author.dni }}
+    </li>
+  }
+</ul>

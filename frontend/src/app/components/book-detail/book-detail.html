@@ -1,1 +1,19 @@
-<p>book-detail works!</p>
+<a routerLink="/">Volver al listado</a>
+
+@if (errorMessage()) {
+  <p>{{ errorMessage() }}</p>
+}
+
+@if (book()) {
+  <h2>{{ book()?.nombre }}</h2>
+
+  <p><strong>ISBN:</strong> {{ book()?.isbn }}</p>
+  <p><strong>Fecha:</strong> {{ book()?.fecha }}</p>
+
+  <h3>Autor</h3>
+  <p>
+    {{ book()?.autor?.nombre }}
+    {{ book()?.autor?.apellido }}
+  </p>
+  <p><strong>DNI:</strong> {{ book()?.autor?.dni }}</p>
+}
