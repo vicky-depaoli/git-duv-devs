@@ -14,7 +14,7 @@ public class Libro {
 
     private String nombre;
     private LocalDate fecha;
-    private String ismn;
+    private String isbn;
 
     @ManyToOne
     @JoinColumn(name = "autor_id")
@@ -39,11 +39,11 @@ public class Libro {
     public void setFecha(LocalDate fecha) { 
         this.fecha = fecha; 
     }
-    public String getIsmn() { 
-        return ismn; 
+    public String getisbn() { 
+        return isbn; 
     }
-    public void setIsmn(String ismn) { 
-        this.ismn = ismn; 
+    public void setisbn(String isbn) { 
+        this.isbn = isbn; 
     }
     public Autor getAutor() { 
         return autor; 
