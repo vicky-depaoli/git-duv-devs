@@ -1,6 +1,6 @@
-package com.example.demo.controllers;
+package com.example.demo.controller;
 
-import com.example.demo.models.Libro;
+import com.example.demo.model.Libro;
 import com.example.demo.services.LibroService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

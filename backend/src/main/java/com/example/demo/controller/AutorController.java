@@ -1,6 +1,6 @@
-package com.example.demo.controllers;
+package com.example.demo.controller;
 
-import com.example.demo.models.Autor;
+import com.example.demo.model.Autor;
 import com.example.demo.services.AutorService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
