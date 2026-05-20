@@ -1,1 +1,28 @@
-<p>book-list works!</p>
+<h2>Listado de libros</h2>
+
+<a routerLink="/new-book">Añadir libro</a>
+
+@if (loading()) {
+  <p>Cargando libros...</p>
+}
+
+@if (errorMessage()) {
+  <p>{{ errorMessage() }}</p>
+}
+
+@if (!loading() && books().length === 0) {
+  <p>No hay libros disponibles.</p>
+}
+
+<ul>
+  @for (book of books(); track book.id) {
+    <li>
+      <strong>{{ book.nombre }}</strong>
+      - {{ book.isbn }}
+      - {{ book.fecha }}
+      <a [routerLink]="['/books', book.id]">Ver detalle</a>
+    </li>
+  }
+</ul>
+
+<p>Total de libros: {{ books().length }}</p>
