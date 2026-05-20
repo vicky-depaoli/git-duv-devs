@@ -1,26 +1,28 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
+<div class="form-card">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    
+    <h2>Book Form</h2>
 
-  <h2>Book Form</h2>
-
-  <!-- TITLE -->
-  <div>
-    <input placeholder="Nombre del libro" formControlName="title" />
-    <p *ngIf="submitted() && form.controls.title.invalid">
-      El nombre es obligatorio
-    </p>
-  </div>
-
-  <!-- AUTHOR -->
-  <div>
-    <input placeholder="Autor" formControlName="author" />
-    <p *ngIf="submitted() && form.controls.author.invalid">
-      El autor es obligatorio
-    </p>
-  </div>
-
-  <!-- BUTTON -->
-  <button type="submit" [disabled]="loading()">
-    {{ loading() ? 'Guardando...' : 'Guardar libro' }}
-  </button>
-
-</form>
+    <!-- TITLE -->
+    <div>
+      <input placeholder="Nombre del libro" formControlName="title" />
+      <p *ngIf="submitted() && form.controls.title.invalid">
+        El nombre es obligatorio
+      </p>
+    </div>
+    
+    <!-- AUTHOR -->
+    <div>
+      <input placeholder="Autor" formControlName="author" />
+      <p *ngIf="submitted() && form.controls.author.invalid">
+        El autor es obligatorio
+      </p>
+    </div>
+    
+    <!-- BUTTON -->
+    <button type="submit" [disabled]="loading()">
+      {{ loading() ? 'Guardando...' : 'Guardar libro' }}
+    </button>
+    
+  </form>
+</div>

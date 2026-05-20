@@ -1,11 +1,17 @@
-<h1>📚 Biblioteca - Git Duv Devs</h1>
+<header class="hero">
+  <img src="/logo-git-duv-devs.png" alt="Logo Git Duv Devs" class="logo" />
+
+  <div>
+    <h1>Biblioteca - Git Duv Devs</h1>
+  </div>
+</header>
 
 <nav>
-  <a routerLink="/">Libros</a> |
-  <a routerLink="/authors">Autores</a> |
+  <a routerLink="/">Libros</a>
+  <a routerLink="/authors">Autores</a>
   <a routerLink="/new-book">Nuevo libro</a>
 </nav>
 
-<hr>
-
-<router-outlet></router-outlet>
+<main class="page">
+  <router-outlet></router-outlet>
+</main>
