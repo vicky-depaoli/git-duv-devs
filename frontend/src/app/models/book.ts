@@ -1,9 +1,9 @@
 import { Author } from './author';
 
 export interface Book {
-  id: number;
-  title: string;
+  id?: number;
+  nombre: string;
+  fecha: string;
   isbn: string;
-  year: number;
-  author: Author;
+  autor: Author;
 }

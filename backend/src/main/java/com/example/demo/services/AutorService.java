@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.models.Autor;
+import com.example.demo.model.Autor;
 import com.example.demo.repositories.AutorRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;

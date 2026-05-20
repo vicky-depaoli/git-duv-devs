@@ -1,6 +1,6 @@
 package com.example.demo.repositories;
 
-import com.example.demo.models.Libro;
+import com.example.demo.model.Libro;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LibroRepository extends JpaRepository<Libro, Long> {
