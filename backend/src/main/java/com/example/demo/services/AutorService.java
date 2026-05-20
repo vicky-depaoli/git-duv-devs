@@ -5,6 +5,7 @@ import com.example.demo.repositories.AutorRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+//Creamos los servicios para saber donde mandar la información.
 @Service
 public class AutorService {
 
