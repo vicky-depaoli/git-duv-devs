@@ -6,7 +6,8 @@ import java.util.List;
 
 @Entity
 public class Autor {
-
+    //Creamos Clase autor con sus respectivos atributos.
+    //Creamos tambien los constructores,getters,setters de los atributos.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

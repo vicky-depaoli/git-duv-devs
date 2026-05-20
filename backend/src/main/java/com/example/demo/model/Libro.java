@@ -6,7 +6,8 @@ import java.time.LocalDate;
 
 @Entity
 public class Libro {
-
+    //Creamos Clase Libro con sus respectivos atributos.
+    //Creamos tambien los constructores,getters,setters de los atributos.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

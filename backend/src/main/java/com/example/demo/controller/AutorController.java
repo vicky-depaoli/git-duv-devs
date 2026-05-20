@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+//Controladores para manipular conexiones al sistema.
 @RestController
 @RequestMapping("/api/autores")
 @CrossOrigin(origins = "http://localhost:4200")
